@@ -20,10 +20,10 @@ const useProposalCreatedEvent = () => {
             });
         };
 
-        // Add the listener for the event
+        
         contract.on("ProposalCreated", handleProposalCreated);
 
-        // Clean up the listener when the component unmounts or contract changes
+        
         return () => {
             contract.off("ProposalCreated", handleProposalCreated);
         };
